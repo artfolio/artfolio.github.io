@@ -18678,7 +18678,9 @@ body .tab-content .collections .card .card-body .badge {
     width: auto;
     margin-bottom: 15px;
     padding-top: 0;
+    /*
     height: 300px;
+    */
     animation: none;
     opacity: 1;
     overflow-y: scroll;
