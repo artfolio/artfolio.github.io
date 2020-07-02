@@ -47,20 +47,23 @@
         <ul class="navbar-nav ml-auto">
           <li class="dropdown nav-item">
             <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-              <i class="material-icons">apps</i>
+              <i class="material-icons">apps</i> Menu
             </a>
             <div class="dropdown-menu dropdown-with-icons">
-              <a href="javascript:void(0)" onclick="scrollTo('boardgame')" class="dropdown-item">
+              <a href="javascript:void(0)" onclick="scrollTo('Boardgame')" class="dropdown-item">
                 <i class="material-icons">casino</i> Boardgame
               </a>
-              <a href="javascript:void(0)" onclick="scrollTo('illustration')" class="dropdown-item">
+              <a href="javascript:void(0)" onclick="scrollTo('Illustration')" class="dropdown-item">
                 <i class="material-icons">palette</i> Illustration
               </a>
-              <a href="javascript:void(0)" onclick="scrollTo('animation')" class="dropdown-item">
+              <a href="javascript:void(0)" onclick="scrollTo('Animation')" class="dropdown-item">
                 <i class="material-icons">live_tv</i> Animation
               </a>
-              <a href="javascript:void(0)" onclick="scrollTo('photograph')" class="dropdown-item">
+              <a href="javascript:void(0)" onclick="scrollTo('Photograph')" class="dropdown-item">
                 <i class="material-icons">camera</i> Photograph
+              </a>
+              <a href="javascript:void(0)" data-toggle="modal" data-target="#modalAboutMe" class="dropdown-item">
+                <i class="material-icons">portrait</i> About Me
               </a>
             </div>
           </li>
@@ -242,6 +245,29 @@
     </div>
     <!-- end carousel -->
   </div>
+  <!-- Classic Modal -->
+  <div class="modal fade" id="modalAboutMe" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">ROXY DAI (DLSR)</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <i class="material-icons">clear</i>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p><u>D</u>esigner = <u>L</u>ife + illu<u>S</u>t<u>R</u>ation
+          </p>
+          <p>To make wonderful works and to move others to let them create something in their own heart. Currently, I am focusing on animation and illustration but is also exploring the world of game narrative.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger btn-link" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--  End Modal -->
   <footer class="footer footer-default">
     <div class="container">
       <nav class="float-left">
@@ -283,9 +309,9 @@
 
 
     function scrollTo(sectionName) {
-      if ($('#section-'+sectionName).length != 0) {
+      if ($('#section'+sectionName).length != 0) {
         $("html, body").animate({
-          scrollTop: $('#section-'+sectionName).offset().top
+          scrollTop: $('#section'+sectionName).offset().top
         }, 1000);
       }
     }
