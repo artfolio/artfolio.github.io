@@ -216,6 +216,28 @@
               <h3 class="title">Boardgame</h3>
             </div>
             <!-- Carousel Card -->
+            <div class="flexslider" id="carouselBoardgame">
+              <ul class="slides">
+                <li>
+                  <img src="image/boardgame_phantom_crown_detective_01.jpg" />
+                </li>
+                <li>
+                  <img src="image/boardgame_phantom_crown_detective_02.png" />
+                </li>
+                <li>
+                  <img src="image/boardgame_phantom_crown_detective_03.png" />
+                </li>
+                <li>
+                  <img src="image/boardgame_phantom_crown_detective_01.jpg" />
+                </li>
+                <li>
+                  <img src="image/boardgame_phantom_crown_detective_02.png" />
+                </li>
+                <li>
+                  <img src="image/boardgame_phantom_crown_detective_03.png" />
+                </li>
+              </ul>
+            </div>
             <div class="flexslider" id="sliderBoardgame">
               <ul class="slides">
                 <li>
@@ -231,28 +253,6 @@
                 <li>
                   <img src="image/boardgame_phantom_crown_detective_01.jpg" />
                   <p class="flex-caption">Caption</p>
-                </li>
-                <li>
-                  <img src="image/boardgame_phantom_crown_detective_02.png" />
-                </li>
-                <li>
-                  <img src="image/boardgame_phantom_crown_detective_03.png" />
-                </li>
-              </ul>
-            </div>
-            <div class="flexslider" id="carouselBoardgame">
-              <ul class="slides">
-                <li>
-                  <img src="image/boardgame_phantom_crown_detective_01.jpg" />
-                </li>
-                <li>
-                  <img src="image/boardgame_phantom_crown_detective_02.png" />
-                </li>
-                <li>
-                  <img src="image/boardgame_phantom_crown_detective_03.png" />
-                </li>
-                <li>
-                  <img src="image/boardgame_phantom_crown_detective_01.jpg" />
                 </li>
                 <li>
                   <img src="image/boardgame_phantom_crown_detective_02.png" />
@@ -449,19 +449,20 @@
         $('#carousel'+sliderName).flexslider({
           animation: "slide",
           controlNav: false,
-          animationLoop: false,
+          animationLoop: true,
           slideshow: false,
-          itemWidth: 210,
-          itemMargin: 5,
-          minItems: 2,
-          maxItems: 4,
+          itemWidth: 128,
+          itemMargin: 1,
+          minItems: 3,
+          maxItems: 6,
+          pausePlay: false,
           asNavFor: '#slider'+sliderName
         });
         $('#slider'+sliderName).flexslider({
           animation: "slide",
           controlNav: false,
-          animationLoop: false,
-          slideshow: false,
+          animationLoop: true,
+          slideshow: true,
           sync: "#carousel"+sliderName
         });
       });
