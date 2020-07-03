@@ -1,0 +1,4 @@
+ImageMagick-7.0.10-22-portable-Q16-x64
+https://imagemagick.org/script/download.php
+
+magick "e:/myimages/image.png" "e:/myimages/image.jpg"

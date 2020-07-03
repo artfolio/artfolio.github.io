@@ -1,0 +1,4 @@
+libwebp-1.1.0-windows-x64
+https://developers.google.com/speed/webp/docs/using
+
+cwebp -resize [width] 0 [src].png -o [dst].webp
