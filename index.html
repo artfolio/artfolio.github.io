@@ -55,19 +55,19 @@
               <i class="material-icons">apps</i> Menu
             </a>
             <div class="dropdown-menu dropdown-with-icons">
-              <a href="javascript:void(0)" onclick="scrollTo('Boardgame')" class="dropdown-item">
+              <a href="javascript:void(0)" onclick="scrollToSection('Boardgame')" class="dropdown-item">
                 <i class="material-icons">casino</i> Boardgame
               </a>
-              <a href="javascript:void(0)" onclick="scrollTo('Illustration')" class="dropdown-item">
+              <a href="javascript:void(0)" onclick="scrollToSection('Illustration')" class="dropdown-item">
                 <i class="material-icons">palette</i> Illustration
               </a>
-              <a href="javascript:void(0)" onclick="scrollTo('Animation')" class="dropdown-item">
+              <a href="javascript:void(0)" onclick="scrollToSection('Animation')" class="dropdown-item">
                 <i class="material-icons">live_tv</i> Animation
               </a>
-              <a href="javascript:void(0)" onclick="scrollTo('Project')" class="dropdown-item">
+              <a href="javascript:void(0)" onclick="scrollToSection('Project')" class="dropdown-item">
                 <i class="material-icons">nature_people</i> Project
               </a>
-              <a href="javascript:void(0)" onclick="scrollTo('Photograph')" class="dropdown-item">
+              <a href="javascript:void(0)" onclick="scrollToSection('Photograph')" class="dropdown-item">
                 <i class="material-icons">camera</i> Photograph
               </a>
               <a href="javascript:void(0)" data-toggle="modal" data-target="#modalAboutMe" class="dropdown-item">
@@ -207,11 +207,14 @@
         </div>
       </div>
     </div>
-    <!-- carousel -->
-    <div class="section">
+    <!-- Section - Boardgame -->
+    <div class="section" id="sectionBoardgame">
       <div class="container">
         <div class="row">
           <div class="col-md-8 mr-auto ml-auto">
+            <div class="title">
+              <h3 class="title">Boardgame</h3>
+            </div>
             <!-- Carousel Card -->
             <div class="card card-raised card-carousel">
               <div id="carouselBoardgamePCD" class="carousel slide" data-ride="carousel" data-interval="3000">
@@ -227,12 +230,12 @@
                     </div>
                   </div>
                   <div class="carousel-item">
-                    <img class="d-block w-100" src="image/boardgame_phantom_crown_detective_02.png" alt="">
+                    <img class="d-block w-100" src="image/boardgame_phantom_crown_detective_01.png" alt="">
                     <div class="carousel-caption d-none d-md-block">
                     </div>
                   </div>
                   <div class="carousel-item">
-                    <img class="d-block w-100" src="image/boardgame_phantom_crown_detective_03.png" alt="">
+                    <img class="d-block w-100" src="image/boardgame_phantom_crown_detective_01.png" alt="">
                     <div class="carousel-caption d-none d-md-block">
                     </div>
                   </div>
@@ -252,7 +255,67 @@
         </div>
       </div>
     </div>
-    <!-- end carousel -->
+    <!-- End Session -->
+    <!-- Section - Illustration -->
+    <div class="section" id="sectionIllustration">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 mr-auto ml-auto">
+            <div class="title">
+              <h3 class="title">Illustration</h3>
+            </div>
+            <!-- Carousel Card -->
+            <!-- End Carousel Card -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Session -->
+    <!-- Section - Animation -->
+    <div class="section" id="sectionAnimation">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 mr-auto ml-auto">
+            <div class="title">
+              <h3 class="title">Animation</h3>
+            </div>
+            <!-- Carousel Card -->
+            <!-- End Carousel Card -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Session -->
+    <!-- Section - Project -->
+    <div class="section" id="sectionProject">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 mr-auto ml-auto">
+            <div class="title">
+              <h3 class="title">Project</h3>
+            </div>
+            <!-- Carousel Card -->
+            <!-- End Carousel Card -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Session -->
+    <!-- Section - Photograph -->
+    <div class="section" id="sectionPhotograph">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 mr-auto ml-auto">
+            <div class="title">
+              <h3 class="title">Photograph</h3>
+            </div>
+            <!-- Carousel Card -->
+            <!-- End Carousel Card -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Session -->
   </div>
   <!-- Classic Modal -->
   <div class="modal fade" id="modalAboutMe" tabindex="-1" role="dialog">
@@ -318,6 +381,7 @@
           <p>The winning project Draboland has a original mythical story of the campus as background, featurin a common space for students and teachers to enjoy the freedom of creating something unrestrainedly.</p>
           <p><b>Designer, Phantom . Crown . Detective</b></p>
           <p>in charge of the boardgame art, character design and game world settin of the reasoning party game, Phantom . Crown . Detective. Joined also the game system development and play testing.</p>
+          <!-- https://www.cssscript.com/responsive-vertical-timeline -->
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-danger btn-link" data-dismiss="modal">Close</button>
@@ -359,14 +423,14 @@
   <script>
     $(document).ready(function() {
       //init DateTimePickers
-      materialKit.initFormExtendedDatetimepickers();
+      //materialKit.initFormExtendedDatetimepickers();
 
       // Sliders Init
-      materialKit.initSliders();
+      //materialKit.initSliders();
     });
 
 
-    function scrollTo(sectionName) {
+    function scrollToSection(sectionName) {
       if ($('#section'+sectionName).length != 0) {
         $("html, body").animate({
           scrollTop: $('#section'+sectionName).offset().top
