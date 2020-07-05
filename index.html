@@ -356,8 +356,22 @@
             <div class="title">
               <h3 class="title"><i class="material-icons">nature_people</i> Project</h3>
             </div>
-            <!-- Carousel Card -->
-            <!-- End Carousel Card -->
+			<div class="iframe-wrapper">
+              <div class="iframe-caption">
+                <p class="iframe-caption-subtitle">The Heritage of Harmony</p>
+              </div>
+              <div class="iframe-container">
+                <iframe src="https://www.youtube.com/embed/54rhFhidKWk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+			</div>
+			<div class="iframe-wrapper">
+              <div class="iframe-caption">
+                <p class="iframe-caption-subtitle">Interdependent Teeth Brushers</p>
+              </div>
+              <div class="iframe-container">
+                <iframe src="https://www.youtube.com/embed/sUSS2MmFDWs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+			</div>
           </div>
         </div>
       </div>
@@ -372,12 +386,68 @@
               <h3 class="title"><i class="material-icons">camera</i> Photograph</h3>
             </div>
             <!-- Carousel Card -->
+            <div class="flexslider" id="carouselPhotographAlbum02">
+              <ul class="slides">
+                <li>
+                  <img src="image/original/photograph_album02_01.jpg" />
+                </li>
+                <li>
+                  <img src="image/original/photograph_album02_02.jpg" />
+                </li>
+                <li>
+                  <img src="image/original/photograph_album02_03.jpg" />
+                </li>
+                <li>
+                  <img src="image/original/photograph_album02_04.jpg" />
+                </li>
+              </ul>
+            </div>
+            <div class="flexslider" id="sliderPhotographAlbum02">
+              <ul class="slides">
+                <li>
+                  <img src="image/original/photograph_album02_01.jpg" />
+                </li>
+                <li>
+                  <img src="image/original/photograph_album02_02.jpg" />
+                </li>
+                <li>
+                  <img src="image/original/photograph_album02_03.jpg" />
+                </li>
+                <li>
+                  <img src="image/original/photograph_album02_04.jpg" />
+                </li>
+              </ul>
+            </div>
+            <!-- End Carousel Card -->
+            <!-- Carousel Card -->
+			<p><h4 class="title">Texture of the Day</h4></p>
+            <div class="flexslider" id="carouselPhotographAlbum03">
+              <ul class="slides">
+                <li>
+                  <img src="image/original/photograph_album03_01.jpg" />
+                </li>
+                <li>
+                  <img src="image/original/photograph_album03_02.jpg" />
+                </li>
+              </ul>
+            </div>
+            <div class="flexslider" id="sliderPhotographAlbum03">
+              <ul class="slides">
+                <li>
+                  <img src="image/original/photograph_album03_01.jpg" />
+                </li>
+                <li>
+                  <img src="image/original/photograph_album03_02.jpg" />
+                </li>
+              </ul>
+            </div>
             <!-- End Carousel Card -->
           </div>
         </div>
       </div>
     </div>
     <!-- End Session -->
+	<div style="padding:20px 0;"></div>
   </div>
   <!-- Classic Modal -->
   <div class="modal fade" id="modalAboutMe" tabindex="-1" role="dialog">
@@ -493,7 +563,7 @@
       //materialKit.initSliders();
 
       // FlexSlider Init
-      let sliderNames = ["Boardgame"];
+      let sliderNames = ["Boardgame", "PhotographAlbum02", "PhotographAlbum03"];
       $.each(sliderNames, function(i, sliderName) {
         // The slider being synced must be initialized first
         $('#carousel'+sliderName).flexslider({

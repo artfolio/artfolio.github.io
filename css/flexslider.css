@@ -98,7 +98,9 @@ html[xmlns] .flexslider .slides {
   align-items: center;
 }
 .flexslider .slides img {
+  /*width: auto;*/
   height: auto;
+  /*max-height: 300px;*/
   -moz-user-select: none;
 }
 .flex-viewport {
