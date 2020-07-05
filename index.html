@@ -33,6 +33,7 @@
   <!-- http://flexslider.woothemes.com -->
   <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
   <!-- Custom -->
+  <link rel="stylesheet" href="css/responsive-iframe.css?v=1.0">
   <!--<link rel="stylesheet" href="css/styles.css?v=1.0">-->
   <!--<script src="js/scripts.js?v=1.0"></script>-->
 </head>
@@ -293,8 +294,55 @@
             <div class="title">
               <h3 class="title"><i class="material-icons">live_tv</i> Animation</h3>
             </div>
-            <!-- Carousel Card -->
-            <!-- End Carousel Card -->
+			<div class="iframe-wrapper">
+              <div class="iframe-caption">
+                <p class="iframe-caption-title">Animation Showreel (2019)</p>
+              </div>
+              <div class="iframe-container">
+                <iframe src="https://www.youtube.com/embed/VunpkOPqoz8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+			</div>
+			<div class="iframe-wrapper">
+              <div class="iframe-caption">
+                <p class="iframe-caption-title">2D animation</p>
+                <p class="iframe-caption-subtitle">Good Medicine is Poison</p>
+                <p class="iframe-caption-description">The animation talks about a girl whose body is transforming into a monster as her jealousy grows. The prescription from a weird doctor swapped the spirit of the girl and the monster living in her inner world.</p>
+              </div>
+              <div class="iframe-container">
+                <iframe src="https://www.youtube.com/embed/-GEPaYJW4YE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+			</div>
+			<div class="iframe-wrapper">
+              <div class="iframe-caption">
+                <p class="iframe-caption-title">3D animation</p>
+                <p class="iframe-caption-subtitle">Rumble the Coach (Short Ver.)</p>
+                <p class="iframe-caption-description">A perfectionist pencil sharpener Rumble aims to be the best coach of the best pencil team in the world but challenges appear as a mechanical pencil arrives at the room.</p>
+              </div>
+              <div class="iframe-container">
+                <iframe title="vimeo-player" src="https://player.vimeo.com/video/248673643" frameborder="0" allowfullscreen></iframe>
+              </div>
+			</div>
+			<div class="iframe-wrapper">
+              <div class="iframe-caption">
+                <p class="iframe-caption-title">Processing animation, Light installation</p>
+                <p class="iframe-caption-title">Deep Focus - The Coral Triangle, Extreme Environement Expedition 2017</p>
+                <p class="iframe-caption-subtitle">The Heritage of Harmony</p>
+                <p class="iframe-caption-description">Collected cultural songs from the Solomon Islands were recorded and analyzed for harmonic structure. The results were processed and visualized as reflective moonlight animation.</p>
+              </div>
+              <div class="iframe-container">
+                <iframe src="https://www.youtube.com/embed/54rhFhidKWk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+			</div>
+			<div class="iframe-wrapper">
+              <div class="iframe-caption">
+                <p class="iframe-caption-title">3D mood animation</p>
+                <p class="iframe-caption-subtitle">The Torso and the Wrecks</p>
+                <p class="iframe-caption-description">A silent piece revealing the similar nature of the two: ship wrecks & torso of sharks left in the sea after their fins being cut.</p>
+              </div>
+              <div class="iframe-container">
+                <iframe title="vimeo-player" src="https://player.vimeo.com/video/248672964" frameborder="0" allowfullscreen></iframe>
+              </div>
+			</div>
           </div>
         </div>
       </div>
@@ -378,7 +426,7 @@
           <p><h4 class="title"><i class="material-icons">language</i> Language</h4></p>
           <p>Cantonese (Native) <i class="material-icons">done_all</i> | English <i class="material-icons">done_all</i> | Putongua <i class="material-icons">done_all</i> | Japanese (N4) <i class="material-icons">done</i> | German (Basic) <i class="material-icons">done</i></p>
           <p><h4 class="title"><i class="material-icons">school</i> Education</h4></p>
-          <p>BACM Creative Media (CityU, HK)</p>
+          <p>BACM (Creative Media), CityU HK</p>
           <p><h4 class="title"><i class="material-icons">work</i> Experience</h4></p>
           <p><b>Illustration and Graphic Design Freelancer, 2015 - Present</b></p>
           <p>Illustraion | Graphic Design | Character Design</p>
@@ -451,7 +499,8 @@
         $('#carousel'+sliderName).flexslider({
           animation: "slide",
           controlNav: false,
-          animationLoop: true,
+          directionNav: false,
+          animationLoop: false,
           slideshow: false,
           itemWidth: 128,
           itemMargin: 1,
@@ -463,7 +512,8 @@
         $('#slider'+sliderName).flexslider({
           animation: "slide",
           controlNav: false,
-          animationLoop: true,
+          directionNav: true,
+          animationLoop: false,
           slideshow: true,
           sync: "#carousel"+sliderName
         });
