@@ -881,30 +881,6 @@
       // Sliders Init
       //materialKit.initSliders();
 
-      // Lazyload Init
-      $(window).lazyScript({
-        selectorClass: 'lazy',
-        callback: function ($item) {
-          let isExist_data_src = (($item.data('src') || "") != "");
-          let isExist_data_youtube = (($item.data('youtube') || "") != "");
-          let isExist_data_vimeo = (($item.data('vimeo') || "") != "");
-          let isExist_data_class = (($item.data('class') || "") != "");
-          let isExist_data_style = (($item.data('style') || "") != "");
-          if (isExist_data_src) {
-            $item.html('<img src="' + $item.data('src') + '"' + (isExist_data_class ? ' class="' + $item.data('class') + '"' : '') + (isExist_data_style ? ' style="' + $item.data('style') + '"' : '') + '>');
-          }
-          else if (isExist_data_youtube) {
-            $item.html('<iframe src="https://www.youtube.com/embed/' + $item.data('youtube') + '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
-          }
-          else if (isExist_data_vimeo) {
-            $item.html('<iframe title="vimeo-player" src="https://player.vimeo.com/video/' + $item.data('vimeo') + '" frameborder="0" allowfullscreen></iframe>');
-          }
-          $item.addClass('changed');
-        },
-        threshold: 0,
-        scrollInterval: 500
-      });
-
       // FlexSlider Init
       let sliderNames = ["BoardgameEilaAndSomethingShiny", "BoardgamePhantomCrownDetective", "BoardgameBillionaireSergeant", "BoardgameRuleOfSurvival", "IllustrationAlbum01", "ProjectDisneyImaginations", "PhotographAlbum02", "PhotographAlbum03"];
       $.each(sliderNames, function(i, sliderName) {
@@ -930,6 +906,32 @@
           slideshow: false,
           sync: "#carousel"+sliderName
         });
+      });
+
+      // Lazyload Init
+      $(window).lazyScript({
+        selectorClass: 'lazy',
+        callback: function ($item) {
+          if ($item.is(':visible')) {
+            let isExist_data_src = (($item.data('src') || "") != "");
+            let isExist_data_youtube = (($item.data('youtube') || "") != "");
+            let isExist_data_vimeo = (($item.data('vimeo') || "") != "");
+            let isExist_data_class = (($item.data('class') || "") != "");
+            let isExist_data_style = (($item.data('style') || "") != "");
+            if (isExist_data_src) {
+              $item.html('<img src="' + $item.data('src') + '"' + (isExist_data_class ? ' class="' + $item.data('class') + '"' : '') + (isExist_data_style ? ' style="' + $item.data('style') + '"' : '') + '>');
+            }
+            else if (isExist_data_youtube) {
+              $item.html('<iframe src="https://www.youtube.com/embed/' + $item.data('youtube') + '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
+            }
+            else if (isExist_data_vimeo) {
+              $item.html('<iframe title="vimeo-player" src="https://player.vimeo.com/video/' + $item.data('vimeo') + '" frameborder="0" allowfullscreen></iframe>');
+            }
+            $item.addClass('changed');
+          }
+        },
+        threshold: 0,
+        scrollInterval: 500
       });
     });
 
